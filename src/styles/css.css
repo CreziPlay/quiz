@@ -1,0 +1,371 @@
+/*
+| Файл основных настроек блоков страницы.
+| Назначение сеток и размещения объектов.
+| ---------------------------------------
+| 17.01.22
+*/
+/* Подключение стороннего шрифта */
+
+
+
+
+
+
+
+html {
+	scroll-behavior: smooth;
+  }
+  
+
+
+body{
+	background: #DCDCDC;
+}
+
+
+.main_div{
+	background: #EBEBEB;
+	width: 50%;
+	margin: 0 auto;
+	padding: 4%;
+	border-radius: 38px;
+	box-shadow: 1px 1px 17px 9px rgba(65, 123, 169, 0.26);
+	top: 50%;
+	left: 50%;
+position: absolute;
+transform: translate(-50%,-50%);
+}
+.variant{
+	border: solid 1px #CBCBCB;
+	border-radius: 17px;
+	padding: 2%;
+	margin-bottom: 2%;
+	transition-duration: .25s;
+}
+.variant:hover{
+	background: rgb(53,59,186);
+	border: solid 1px #353BBA;
+	cursor: pointer;
+	color: white;
+}
+.back-button{
+	background: #D9D9D9;
+	color:black;
+	padding: 1%;
+	border: 0;
+	border-radius: 8px;
+	transition-duration: .25s;
+}
+.back-button:hover{
+
+background: #353BBA;
+cursor: pointer;
+color: white;
+}
+.footer-qiuz{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+h1{
+	font-size: 40px;
+}
+
+.div-over{
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	transition-duration: .5s;
+}
+/* Общие правила всех элементов страницы */
+* {
+	margin: 0px;
+	padding: 0px;
+	font-size: 20px;
+
+	color: black;
+
+	font-family: "Montserrat-Bold";
+
+
+}
+
+a{
+	text-decoration: none;
+}
+li{
+list-style: none;
+
+}
+h1{
+font-family: "Montserrat-Bold";
+text-align: left;
+}
+.quiz-h1{
+	margin: 5% 0% 5% 0%;
+}
+img{
+
+object-fit: cover;
+display: block;
+}
+/* Блок, отображающий содержимое страницы */
+.page {
+	display: grid;
+	grid-template-rows: repeat(7, minmax(min-content,max-content));
+
+
+}
+.w{
+	color: white;
+}
+
+/* Блок-структура динамического контента */
+:is(nav,header,main,footer) > :is(.container) {
+
+	display: grid;
+	grid-template-rows: repeat(auto-fill, minmax(0px, max-content));
+	grid-gap: 20px;
+	margin: 0 auto;
+
+}
+
+
+
+
+@font-face {
+	font-family: "Montserrat-Bold";
+	src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+
+}
+
+
+
+
+.end-h1{
+	font-size: 10vw;
+	text-align: left;
+	color: #302E78;
+	margin-bottom: 5%;
+}
+.reslt-p{
+	font-size: 60px;
+	color: #302E78;
+}
+.reslt{
+	border: solid #302E78 2px;
+	padding: 1% 2%;
+	border-radius: 15px;
+	font-size: 40px;
+	color: #302E78;
+}
+.btn-rest{
+	color: #302E78;
+	border: solid #302E78 2px;
+	padding: 1%;
+	border-radius: 10px;
+	transition-duration: .5s;
+	cursor: pointer;
+	margin-top: 2%;
+}
+.btn-rest:hover{
+	background: #302E78;
+
+	color: white;
+}
+/* Блок-структура построчного размещения */
+:is(nav,header,main,footer) > :is(.container) > :is(.container__row) {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+	grid-gap: 20px;
+
+}
+
+.m-5{
+	margin-bottom: 2%;
+}
+
+
+@media screen and (min-width: 1600px) {
+	:is(nav,header,main,footer) > :is(.container) {
+		max-width: 1600px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1720px){
+		:is(nav,header,main,footer) > :is(.container) {
+				max-width: 1200px;
+
+
+		}
+		.fotos{
+			text-align: center;
+
+		}
+		header>.container>.container__row>.heder_con>.forma{
+			margin: 0 auto;
+			
+		}
+
+}
+@media(max-width: 1300px){
+	.music_pleer>.use_pleer{
+		max-width: 305px;
+	}
+	:is(nav,header,main,footer) > :is(.container) {
+				max-width: 970px;
+
+
+
+			}
+:is(nav,header,main,footer) > :is(.container) {
+				margin: 0 auto;
+			}
+}
+@media(max-width: 1111px){
+	.filtr>.hed-filtr>p{
+		font-size: 16px;
+	}
+	.olojka-film{
+		margin: 0 auto;
+	}
+	.container>.film-hed{
+		display: grid;
+		margin-bottom: 5%;
+	}
+	.opisanie-div{
+		min-height: 500px;
+	}
+	.music_pleer>.use_pleer{
+		max-width: 255px;
+	}
+
+	.yslygi>.container>.container__row{
+		grid-template-columns: 50% 50%;
+	}
+
+		.container{
+		margin: 0 auto;
+	}
+	header>.container>.container__row>.menu>ul>.menu_btn>a{
+		font-size: 16px;
+		text-align: center;
+	}
+
+	}
+	:is(nav,header,main,footer) > :is(.container) {
+				margin: 0 auto;
+			}
+
+
+
+@media(max-width: 992px){
+:is(nav,header,main,footer) > :is(.container) {
+				margin: 0 auto;
+	}		
+}	
+nav>.container>.container__row>.nav_bar{
+	padding-right: 2%;
+}
+
+@media(max-width: 990px){
+.container>.overfl>.pleer_row{
+	display: flex;
+
+}
+}
+
+
+@media(max-width: 767px){
+	:is(nav,header,main,footer) > :is(.container) {
+				max-width: none;}
+:is(nav,header,main,footer) > :is(.container) {
+				margin: 0 auto;
+			}
+
+
+	}		
+
+
+
+@media(max-width: 650px){
+
+
+.music_pleer>.use_pleer{
+max-width: 400px;
+
+}
+}
+@media(max-width: 500px){
+	.films>.spisok{
+		padding-left: 5%;
+	}
+	.films>.filtr{
+		padding-right: 5%;
+	}
+	.container>.overfl>.pleer_row{
+		gap: 0;
+	
+	}
+	.music_pleer>.name_trek_div{
+		margin-bottom: 15%;
+	}
+	.use_pleer>.btns_pleer{
+		margin-top: 20%;
+	}
+	main>.container{
+		padding: 0;
+	}
+	.overfl{
+		height: 100vh;
+	}
+	.overfl>.pleer_row{
+		padding: 0;
+		height: 100vh;
+	}
+	.img_music_container>.img_music {
+		height: 65vh;
+		max-height: 100%;
+	}
+	.pleer_row>.music_pleilist{
+		border-radius: 0;
+	
+		flex: 0 0 90%;
+	}
+	.overfl>.pleer_row>.music_pleer{
+		border-radius: 0;
+	}	
+	.music_pleer>.use_pleer{
+		max-width: 300px;
+		
+}
+
+
+}
+
+
+
+
+
+@media(max-width: 410px){
+	.music_pleer>.use_pleer{
+		max-width: 250px;
+		
+}
+
+}
+.avtorisation-body{
+	max-height: 100vh;
+}
