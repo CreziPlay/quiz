@@ -20,8 +20,8 @@ const QuizComp = function ({corrt}){
           correct: 0,
         },
         {
-          titele: 'Вова долбаеб?',
-          variants: ['ДА','Конечно','ОБЯЗАТЕЛЬНО'],
+          titele: 'Vue - это ?',
+          variants: ['Библиотека','Фреймворк','хз'],
           correct: 1,
         },
         {
